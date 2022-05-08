@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "react-router-dom";
 
 export const Nav = styled.nav`
   background: #23272a;
@@ -44,7 +43,7 @@ export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    color: #fff;
+    color: #f7ebff;
     display: block;
     position: absolute;
     top: 0;

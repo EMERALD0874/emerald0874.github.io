@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBars, FaLinkedin, FaGithub, FaItchIo } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import {
   Nav,
   NavbarContainer,
@@ -11,12 +12,12 @@ import {
   NavLinks,
 } from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo>Hudson Samuels</NavLogo>
-        <MobileIcon>
+        <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
         <NavMenu>
@@ -39,6 +40,11 @@ const Navbar = () => {
           <NavItem>
             <NavSocials href="https://www.linkedin.com/in/hudson-samuels-b99092197/">
               <FaLinkedin />
+            </NavSocials>
+          </NavItem>
+          <NavItem>
+            <NavSocials href="mailto:info@hudsonsamuels.com">
+              <MdEmail />
             </NavSocials>
           </NavItem>
         </NavMenu>
