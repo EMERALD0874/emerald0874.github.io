@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-  background: #9266b0;
+  background: -webkit-linear-gradient(#b79ced, #9266b0), #9266b0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 800px;
+  height: 600px;
   position: relative;
   z-index: 1;
 
@@ -27,7 +27,7 @@ export const HeroBg = styled.div`
 `;
 
 export const HeroAvatar = styled.img`
-  height: 800px;
+  height: 600px;
   z-index: 2;
   position: absolute;
   right: 0px;

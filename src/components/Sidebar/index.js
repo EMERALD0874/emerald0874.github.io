@@ -27,16 +27,19 @@ const Sidebar = ({ isOpen, toggle }) => {
             Projects
           </SidebarLink>
           <SidebarSocials>
-            <Social href="https://github.com/EMERALD0874">
+            <Social href="https://github.com/EMERALD0874" target="_blank">
               <FaGithub />
             </Social>
-            <Social href="https://emerald0874.itch.io/">
+            <Social href="https://emerald0874.itch.io/" target="_blank">
               <FaItchIo />
             </Social>
-            <Social href="https://www.linkedin.com/in/hudson-samuels-b99092197/">
+            <Social
+              href="https://www.linkedin.com/in/hudson-samuels-b99092197/"
+              target="_blank"
+            >
               <FaLinkedin />
             </Social>
-            <Social href="mailto:info@hudsonsamuels.com">
+            <Social href="mailto:info@hudsonsamuels.com" target="_blank">
               <MdEmail />
             </Social>
           </SidebarSocials>
