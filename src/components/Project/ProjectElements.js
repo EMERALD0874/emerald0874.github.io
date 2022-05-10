@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ProjectContainer = styled.div`
   color: #fff;
@@ -27,9 +28,10 @@ export const ProjectWrapper = styled.div`
   margin-right: auto;
   padding: 0 24px;
   justify-content: center;
+  overflow-y: hidden;
 `;
 
-export const ProjectRow = styled.div`
+export const ProjectRow = styled(motion.div)`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;

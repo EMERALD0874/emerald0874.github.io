@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import {
   ProjectContainer,
@@ -17,6 +17,8 @@ import {
 } from "./ProjectElements";
 import { ButtonLink } from "../ButtonElements";
 import { ScrollAnchor } from "../ScrollAnchorElement";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 const Project = ({
   id,
@@ -30,12 +32,30 @@ const Project = ({
   imgAlt,
   imgLeft,
 }) => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1.0 },
+      });
+    }
+  }, [inView]);
+
   return (
     <>
       <ProjectContainer>
         <ScrollAnchor id={id} />
         <ProjectWrapper>
-          <ProjectRow imgLeft={imgLeft}>
+          <ProjectRow
+            ref={ref}
+            imgLeft={imgLeft}
+            initial={{ y: 10, opacity: 0 }}
+            animate={animation}
+          >
             <Column1>
               <TextWrapper>
                 <Subtitle imgLeft={imgLeft}>{subtitle}</Subtitle>

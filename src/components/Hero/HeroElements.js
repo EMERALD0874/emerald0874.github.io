@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const HeroContainer = styled.div`
   background: -webkit-linear-gradient(#b79ced, #9266b0), #9266b0;
@@ -9,6 +10,7 @@ export const HeroContainer = styled.div`
   height: 600px;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     height: 400px;
@@ -26,7 +28,7 @@ export const HeroBg = styled.div`
   overflow: hidden;
 `;
 
-export const HeroAvatar = styled.img`
+export const HeroAvatar = styled(motion.img)`
   height: 600px;
   z-index: 2;
   position: absolute;
