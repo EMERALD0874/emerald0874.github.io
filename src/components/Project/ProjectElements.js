@@ -3,10 +3,18 @@ import styled from "styled-components";
 export const ProjectContainer = styled.div`
   color: #fff;
   background: #23272a;
+  position: relative;
 
   @media screen and (max-width: 768px) {
     padding: 50px 0;
   }
+
+  /* :before {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    height: 80px;
+  } */
 `;
 
 export const ProjectWrapper = styled.div`
@@ -39,7 +47,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Subtitle = styled.p`
-  background: -webkit-linear-gradient(#b79ced, #9266b0);
+  background: -webkit-linear-gradient(#b79ced, #9266b0), #b79ced;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,7 +65,7 @@ export const Subtitle = styled.p`
 `;
 
 export const Title = styled.h1`
-  margin-bottom: 24px;
+  margin-bottom: 6px;
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
@@ -72,11 +80,26 @@ export const Title = styled.h1`
   }
 `;
 
+export const Note = styled.p`
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #f7ebff;
+  text-align: ${({ imgLeft }) => (imgLeft ? `left` : `right`)};
+
+  @media screen and (max-width: 768px) {
+    text-align: left;
+  }
+`;
+
 export const Description = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: #f7ebff;
+  color: #ddd;
   text-align: ${({ imgLeft }) => (imgLeft ? `left` : `right`)};
 
   @media screen and (max-width: 768px) {

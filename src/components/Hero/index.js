@@ -17,9 +17,8 @@ const Hero = () => {
       <HeroContent>
         <HeroH1>Hello, I'm Hudson!</HeroH1>
         <HeroP>
-          I am a full stack developer that enjoys programming as a hobby and a
-          job. I have an interest in all sorts of things, from designing video
-          games to programming Discord bots.
+          I am a freelance full stack developer, game designer, and graphic
+          designer from Dallas, Texas.
         </HeroP>
       </HeroContent>
     </HeroContainer>

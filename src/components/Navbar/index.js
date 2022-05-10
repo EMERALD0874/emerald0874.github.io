@@ -11,21 +11,34 @@ import {
   NavItem,
   NavLinks,
 } from "./NavbarElements";
+import { animateScroll as scroll } from "react-scroll";
+
+const goHome = () => {
+  scroll.scrollToTop({ duration: 500, spy: true, exact: true });
+};
 
 const Navbar = ({ toggle }) => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo>Hudson Samuels</NavLogo>
+        <NavLogo to="/" onClick={goHome}>
+          Hudson Samuels
+        </NavLogo>
         <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
         <NavMenu>
           <NavItem>
-            <NavLinks to="skills">Skills</NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="projects">Projects</NavLinks>
+            <NavLinks
+              to="projects"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact={true}
+              offset={-80}
+            >
+              Projects
+            </NavLinks>
           </NavItem>
           <NavItem>
             <NavSocials href="https://github.com/EMERALD0874" target="_blank">

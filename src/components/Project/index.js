@@ -13,13 +13,16 @@ import {
   Column2,
   Img,
   ImgWrap,
+  Note,
 } from "./ProjectElements";
 import { ButtonLink } from "../ButtonElements";
+import { ScrollAnchor } from "../ScrollAnchorElement";
 
 const Project = ({
   id,
   subtitle,
   title,
+  note,
   description,
   website,
   source,
@@ -29,13 +32,15 @@ const Project = ({
 }) => {
   return (
     <>
-      <ProjectContainer id={id}>
+      <ProjectContainer>
+        <ScrollAnchor id={id} />
         <ProjectWrapper>
           <ProjectRow imgLeft={imgLeft}>
             <Column1>
               <TextWrapper>
                 <Subtitle imgLeft={imgLeft}>{subtitle}</Subtitle>
                 <Title imgLeft={imgLeft}>{title}</Title>
+                <Note imgLeft={imgLeft}>{note && note}</Note>
                 <Description imgLeft={imgLeft}>{description}</Description>
                 <BtnWrap id="buttons" imgLeft={imgLeft}>
                   {website && (

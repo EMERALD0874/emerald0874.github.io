@@ -79,9 +79,9 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
 
-  &.active {
+  /* &.active {
     border-bottom: 3px solid #9266b0;
-  }
+  } */
 `;
 
 export const NavSocials = styled.a`

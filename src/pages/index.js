@@ -6,8 +6,10 @@ import Project from "../components/Project";
 import {
   bitbotData,
   dreadlightData,
+  paydayData,
   temocData,
 } from "../components/Project/ProjectData";
+import SectionHeader from "../components/SectionHeader";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +23,11 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Hero />
-      <Project {...dreadlightData} />
+      <SectionHeader title="Projects" id="projects" />
       <Project {...bitbotData} />
+      <Project {...dreadlightData} />
       <Project {...temocData} />
+      <Project {...paydayData} />
     </>
   );
 };
