@@ -10,6 +10,7 @@ import {
   temocData,
 } from "../components/Project/ProjectData";
 import SectionHeader from "../components/SectionHeader";
+import { SectionContainer } from "../components/SectionContainerElement";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +24,13 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Hero />
-      <SectionHeader title="Projects" id="projects" />
-      <Project {...bitbotData} />
-      <Project {...dreadlightData} />
-      <Project {...temocData} />
-      <Project {...paydayData} />
+      <SectionContainer>
+        <SectionHeader title="Projects" id="projects" />
+        <Project {...bitbotData} />
+        <Project {...dreadlightData} />
+        <Project {...temocData} />
+        <Project {...paydayData} />
+      </SectionContainer>
     </>
   );
 };

@@ -5,7 +5,6 @@ export const HeaderContainer = styled.div`
   height: 80px;
   align-items: flex-end;
   justify-content: center;
-  background: #23272a;
 `;
 
 export const HeaderTitle = styled.h1`
