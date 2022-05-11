@@ -44,9 +44,27 @@ const SkillLevelEnum = {
 };
 
 const Skills = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1.0 },
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
   return (
     <>
-      <SkillBarWrapper>
+      <SkillBarWrapper
+        ref={ref}
+        initial={{ y: 10, opacity: 0 }}
+        animate={animation}
+      >
         <SkillBar
           title={"C"}
           logo={SiC}
@@ -163,26 +181,16 @@ const Skills = () => {
 const SkillBar = ({ title, skillLevel, logo, brandColor }) => {
   const { ref, inView } = useInView();
   const [skillLevelAnimated, updateSkillLevel] = useState(0);
-  const animation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start({
-        y: 0,
-        opacity: 1,
-        transition: { duration: 1.0 },
-      });
       updateSkillLevel(skillLevel.value);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
   return (
-    <SkillBarContainer
-      ref={ref}
-      initial={{ y: 10, opacity: 0 }}
-      animate={animation}
-    >
+    <SkillBarContainer ref={ref}>
       <CircularProgressbarWithChildren
         value={skillLevelAnimated}
         circleRatio={0.7}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import chroma from "chroma-js";
 import { motion } from "framer-motion";
 
-export const SkillBarWrapper = styled.div`
+export const SkillBarWrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(6, minmax(auto, 0fr));
   z-index: 1;
