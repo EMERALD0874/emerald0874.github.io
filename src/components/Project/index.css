@@ -1,7 +1,7 @@
-#buttons > *:last-child {
+#project-buttons > *:last-child {
   margin-right: 0px;
 }
 
-#buttons > * {
+#project-buttons > * {
   margin-right: 10px;
 }

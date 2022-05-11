@@ -38,6 +38,8 @@ export const FilterButton = styled.div`
   transition: all 0.1s ease-in-out;
   text-decoration: none;
   margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 
   &:hover {
     transition: all 0.1s ease-in-out;

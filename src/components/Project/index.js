@@ -63,7 +63,7 @@ const Project = ({
                 <Title imgLeft={imgLeft}>{title}</Title>
                 <Note imgLeft={imgLeft}>{note && note}</Note>
                 <Description imgLeft={imgLeft}>{description}</Description>
-                <BtnWrap id="buttons" imgLeft={imgLeft}>
+                <BtnWrap id="project-buttons" imgLeft={imgLeft}>
                   {website && (
                     <ButtonLink href={website} target="_blank">
                       Website
