@@ -43,6 +43,7 @@ const Project = ({
         transition: { duration: 1.0 },
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
   return (

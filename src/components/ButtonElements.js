@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const ButtonLink = styled.a`
   border-radius: 50px;
-  background: #fff;
+  background: #171717;
   white-space: nowrap;
   padding: 12px 30px;
-  color: #000;
+  color: #fff;
   font-size: 16px;
   outline: none;
   border: none;
@@ -19,6 +19,5 @@ export const ButtonLink = styled.a`
   &:hover {
     transition: all 0.1s ease-in-out;
     background: #9266b0;
-    color: #fff;
   }
 `;

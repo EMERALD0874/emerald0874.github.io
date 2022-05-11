@@ -11,6 +11,7 @@ import {
 } from "../components/Project/ProjectData";
 import SectionHeader from "../components/SectionHeader";
 import { SectionContainer } from "../components/SectionContainerElement";
+import Skills from "../components/Skills";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,10 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Hero />
+      <SectionContainer>
+        <SectionHeader title="Skills" id="skills" />
+        <Skills />
+      </SectionContainer>
       <SectionContainer>
         <SectionHeader title="Projects" id="projects" />
         <Project {...bitbotData} />

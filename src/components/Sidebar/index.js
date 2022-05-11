@@ -21,6 +21,17 @@ const Sidebar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink
+            to="skills"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact={true}
+            offset={-80}
+            onClick={toggle}
+          >
+            Skills
+          </SidebarLink>
+          <SidebarLink
             to="projects"
             smooth={true}
             duration={500}

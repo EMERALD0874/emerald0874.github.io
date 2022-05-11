@@ -20,7 +20,7 @@ export const ProjectContainer = styled.div`
 export const ProjectWrapper = styled.div`
   display: grid;
   z-index: 1;
-  min-height: 400px;
+  min-height: 350px;
   width: 100%;
   max-width: 1200px;
   margin-left: auto;

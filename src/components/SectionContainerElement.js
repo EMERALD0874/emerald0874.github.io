@@ -4,7 +4,7 @@ export const SectionContainer = styled.div`
   background: #23272a;
   overflow: hidden;
 
-  :nth-child(odd) {
+  :nth-child(even) {
     background: #2a2f33;
   }
 `;

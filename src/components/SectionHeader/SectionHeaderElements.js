@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   display: flex;
-  height: 80px;
-  align-items: flex-end;
+  height: 100px;
+  align-items: center;
   justify-content: center;
 `;
 
