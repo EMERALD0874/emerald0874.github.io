@@ -33,6 +33,8 @@ export const SkillBarContainer = styled(motion.div)`
   justify-content: center;
   align-items: flex-start;
   size: "80px";
+  opacity: ${({ active }) => (active ? 1 : 0.2)};
+  transition: all 0.2s ease-in-out;
 `;
 
 export const SkillBarTitle = styled.h1`
@@ -59,4 +61,14 @@ export const SkillBarSubtitle = styled.h1`
   -webkit-text-fill-color: transparent;
   letter-spacing: 1.8px;
   text-transform: uppercase;
+`;
+
+export const SkillButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+  width: 100%;
 `;
