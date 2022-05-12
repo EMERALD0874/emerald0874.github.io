@@ -115,6 +115,13 @@ export const BtnWrap = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: left;
   }
+
+  > * {
+    margin-right: 10px;
+  }
+  > *:last-child {
+    margin-right: 0px;
+  }
 `;
 
 export const Column1 = styled.div`
