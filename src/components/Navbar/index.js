@@ -56,21 +56,15 @@ const Navbar = ({ toggle }) => {
             <NavSocials href="https://github.com/EMERALD0874" target="_blank">
               <FaGithub />
             </NavSocials>
-          </NavItem>
-          <NavItem>
             <NavSocials href="https://emerald0874.itch.io/" target="_blank">
               <FaItchIo />
             </NavSocials>
-          </NavItem>
-          <NavItem>
             <NavSocials
               href="https://www.linkedin.com/in/hudson-samuels-b99092197/"
               target="_blank"
             >
               <FaLinkedin />
             </NavSocials>
-          </NavItem>
-          <NavItem>
             <NavSocials href="mailto:info@hudsonsamuels.com" target="_blank">
               <MdEmail />
             </NavSocials>

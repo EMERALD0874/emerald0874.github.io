@@ -68,6 +68,14 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  :last-of-type {
+    padding-right: 0;
+  }
 `;
 
 export const NavLinks = styled(LinkS)`
@@ -75,7 +83,6 @@ export const NavLinks = styled(LinkS)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
   height: 100%;
   cursor: pointer;
 
@@ -89,7 +96,15 @@ export const NavSocials = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 10px;
   height: 100%;
   cursor: pointer;
+
+  :first-of-type {
+    padding-left: 0;
+  }
+
+  :last-of-type {
+    padding-right: 0;
+  }
 `;
